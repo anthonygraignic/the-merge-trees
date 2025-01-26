@@ -1,0 +1,221 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "contractInitBlockNumber",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint16",
+            "name": "initLength",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "diameter",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "segments",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "branches",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bool",
+            "name": "animated",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint16",
+            "name": "angle",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "d",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "delta",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "stags",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "hares",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint128",
+            "name": "mintedSince",
+            "type": "uint128"
+          }
+        ],
+        "internalType": "struct ITreeSeeder.Tree",
+        "name": "tree",
+        "type": "tuple"
+      }
+    ],
+    "name": "cloneTree",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint16",
+            "name": "initLength",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "diameter",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "segments",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "branches",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bool",
+            "name": "animated",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint16",
+            "name": "angle",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "d",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "delta",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "stags",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "hares",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint128",
+            "name": "mintedSince",
+            "type": "uint128"
+          }
+        ],
+        "internalType": "struct ITreeSeeder.Tree",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "contractInitBlockNumber",
+        "type": "uint256"
+      }
+    ],
+    "name": "generateTree",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint16",
+            "name": "initLength",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "diameter",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "segments",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "branches",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bool",
+            "name": "animated",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint16",
+            "name": "angle",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "d",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "delta",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "stags",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "hares",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint128",
+            "name": "mintedSince",
+            "type": "uint128"
+          }
+        ],
+        "internalType": "struct ITreeSeeder.Tree",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

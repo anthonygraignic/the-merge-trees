@@ -1,0 +1,26 @@
+<svg viewBox="0 0 200 350" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .ascii-art {
+    font: bold 18px monospace;
+    fill: black;
+    }
+    @media (prefers-color-scheme: dark) {
+    .ascii-art {
+    fill: white;
+    }
+    }
+  </style>
+
+  <text x="10" y="50" class="ascii-art" xml:space="preserve">
+    <tspan x="10" dy="0">      _-_      </tspan>
+    <tspan x="10" dy="20">   /~~   ~~\   </tspan>
+    <tspan x="10" dy="20"> /~         ~\ </tspan>
+    <tspan x="10" dy="20">(             )</tspan>
+    <tspan x="10" dy="20"> \  _-    -_ / </tspan>
+    <tspan x="10" dy="20">  ^  \\ //  ^  </tspan>
+    <tspan x="10" dy="20">      | |      </tspan>
+    <tspan x="10" dy="20">      | |      </tspan>
+    <tspan x="10" dy="20">      | |      </tspan>
+    <tspan x="10" dy="20">     /   \     </tspan>
+  </text>
+</svg>

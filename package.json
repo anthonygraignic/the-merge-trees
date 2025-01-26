@@ -1,0 +1,16 @@
+{
+  "name": "merge-trees-monorepo",
+  "version": "0.0.1",
+  "author": "Anthony Graignic",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthonygraignic/the-merge-trees.git"
+  },
+  "homepage": "https://themergetrees.xyz",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pnpm -r --filter=./packages/website run build"
+  },
+  "license": "GPL-3.0"
+}

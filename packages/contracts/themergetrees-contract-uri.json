@@ -1,0 +1,12 @@
+{
+    "name": "The Merge Trees",
+    "description": "A generative art experiment to build an on-chain evolving forest.",
+    "image": "https://themergetrees.xyz/logo.png",
+    "external_link": "https://themergetrees.xyz",
+    "seller_fee_basis_points": 0,
+    "banner_image": "https://themergetrees.xyz/banner.png",
+    "collaborators": [
+        "0x1d4F6aFC0E305048aE0A9bE9F76b4b89d4a360A5",
+        "0x0333232cC77f8c0bc2287a7b248ED3F5abA5234E"
+    ]
+}

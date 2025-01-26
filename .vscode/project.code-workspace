@@ -1,0 +1,26 @@
+{
+    "folders": [
+        {
+            "name": "ROOT",
+            "path": "../"
+        },
+        {
+            "name": "contracts",
+            "path": "../packages/contracts"
+        },
+        {
+            "name": "website",
+            "path": "../packages/website"
+        },
+    ],
+    "settings": {
+        "files.exclude": {
+            "node_modules/": true,
+            "packages/": true
+        },
+        "jest.runMode": "on-demand",
+        "jest.disabledWorkspaceFolders": [
+            "ROOT"
+        ]
+    }
+}

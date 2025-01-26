@@ -1,0 +1,98 @@
+[
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint16",
+            "name": "initLength",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint16",
+            "name": "diameter",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "segments",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "branches",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bool",
+            "name": "animated",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint16",
+            "name": "angle",
+            "type": "uint16"
+          },
+          {
+            "internalType": "uint8",
+            "name": "d",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "delta",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "stags",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "hares",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint128",
+            "name": "mintedSince",
+            "type": "uint128"
+          }
+        ],
+        "internalType": "struct ITreeSeeder.Tree",
+        "name": "_tree",
+        "type": "tuple"
+      },
+      {
+        "internalType": "uint32",
+        "name": "_length",
+        "type": "uint32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "colors",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "grow",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "markerRender",
+        "type": "string"
+      }
+    ],
+    "name": "render",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "treeRender",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  }
+]

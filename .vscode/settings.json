@@ -1,0 +1,7 @@
+{
+    "slither.solcPath": "",
+    "slither.hiddenDetectors": [],
+    "slither.include_paths": [
+        "packages/contracts/"
+    ],
+}
