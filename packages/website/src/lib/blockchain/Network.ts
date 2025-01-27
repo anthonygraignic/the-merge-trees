@@ -23,6 +23,12 @@ export class Network {
 					name: 'sepolia'
 				};
 				break;
+			case 'mainnet':
+				network = {
+					chainId: 1,
+					name: 'mainnet'
+				};
+				break;
 			default:
 				network = ethers.providers.getNetwork(networkish);
 		}
