@@ -4,28 +4,6 @@
 
 <div class="flex flex-col pt-4 px-4 lg:px-10 max-w-5xl lg:w-[64rem]">
 	<div class="faq__list__item">
-		<Toggle question="Summary">
-			<ul class="list-disc list-inside mt-2">
-				<li>Artwork is generative and stored fully on-chain.</li>
-				<li>Artwork evolves with blocks and tranfers.</li>
-				<li>All MergeTrees will grow or decline depending of the game events.</li>
-				<li>
-					The contract has 2 phases:
-					<ol class="list-decimal list-inside mt-2 ml-4">
-						<li>
-							A first phase of <b>open mint</b> for everyone until the initial total supply is reached
-							= 100 + 3 artist's proofs.
-						</li>
-						<li>
-							A second step of <b>stag hunt</b> to play a worlwide cooperation game and earn rewards
-							(NFT(s), rare traits...).
-						</li>
-					</ol>
-				</li>
-			</ul>
-		</Toggle>
-	</div>
-	<div class="faq__list__item">
 		<Toggle question="What is a stag hunt?">
 			<p>
 				In game theory, a <a
@@ -121,37 +99,7 @@
 			</p>
 		</Toggle>
 	</div>
-	<div class="faq__list__item">
-		<Toggle question="On-chain artwork">
-			MergeTrees are stored fully onchain on Ethereum and do not host the images files nor metadata
-			on other network like IPFS or Arweave.
-			<br /> <br />
-			From the tree's traits, all the branches characteristics are computed and put together to draw
-			the entire tree. Once it is ready, the resulting SVG is encoded in base64.
-			<br /><br />
-			<h3>Rendering</h3>
-			Rendering trees on-chain wasn't easy, but it's real now. A first approach involved doing a lot
-			of maths in Solidity to calculate each branch position. But there were a lot of limitations about
-			the tree parameters.
-			<br />
-			So after some research, I decided to leverage the power of
-			<a href="https://www.w3.org/TR/SVG2/">SVG</a>
-			and its
-			<a
-				href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use"
-				rel="external noopener noreferrer"
-				target="_blank">&lt;use href &gt;</a
-			>
-			, which allow to re-use parts of a document. For the tree, each branch is drawn by reusing the
-			previous one and scaling/rotating it.
-			<br />
-			That's how it is stored on-chain and for old computers why you can experience some slowness (especially
-			on animated one, but hey see it as an homage to PoW 😉️).
-			<br />
-			<br />
-			A detailed article will be published soon.
-		</Toggle>
-	</div>
+
 	<div class="faq__list__item">
 		<Toggle question="Artwork evolution">
 			<h3>Transfers 🤝</h3>
@@ -225,79 +173,7 @@
 				</li>
 			</ul>
 			<br />
-			You can build your own tree in the <a href="/playground">Playground</a>.
-		</Toggle>
-	</div>
-	<div class="faq__list__item">
-		<Toggle question="Seeder contract">
-			<p>
-				The MergeTree Seeder contract is used to determine traits during the minting process. It is
-				upgradeable to support future trait generation algorithm upgrades and can be locked by the
-				team to prevent any further update.
-				<br />
-				Currently, traits are determined using pseudo-random number generation:
-				<br /><br />
-				<code>keccak256( abi.encodePacked( block.prevrandao, address(this), tokenId ) );</code>
-				<br /><br />
-				Please note that it is not truly random and could be predicted and/or biased by validators, but
-				in a limited way.
-				<br />
-				See
-				<a
-					href="https://eips.ethereum.org/EIPS/eip-4399#security-considerations"
-					rel="external noopener noreferrer"
-					target="_blank">Security considerations of EIP-4399</a
-				>.
-			</p>
-		</Toggle>
-	</div>
-	<!-- <div class="faq__list__item">
-		<Toggle question="MergeTrees DAO & Governance">
-			<p><i>Work in Progress</i></p>
-			<br />
-		</Toggle>
-	</div> -->
-	<div class="faq__list__item">
-		<Toggle question="Team/Artist">
-			I (<a href="https://twitter.com/agraignic" rel="external noopener noreferrer" target="_blank">
-				agraignic.eth
-			</a>) am the creator of this project and the only team member for now !
-			<br /> While doing some research about on-chain NFT possibilities, I felt in love with trees
-			and their digital modeling. And plan to go way further than trees :)
-			<br />
-			<a href="https://discord.gg/puHyJy6vh5" rel="external noopener noreferrer" target="_blank">
-				Join the team
-			</a>
-			<br />
-			PS: You might find references of this project back in 2022. Yep this is a side project that was
-			kept in a folder for months/years.<br />
-			But I finally decided to launch it as is, by simplifying parts of it and adding the stag hunt game.
-		</Toggle>
-	</div>
-	<div class="faq__list__item">
-		<Toggle question="License & Composability">
-			The artworks are licensed in <a
-				href="https://creativecommons.org/licenses/by/4.0/"
-				rel="external noopener noreferrer"
-				target="_blank">CC BY</a
-			>
-			and the code in
-			<a
-				href="https://www.gnu.org/licenses/gpl-3.0.html"
-				rel="external noopener noreferrer"
-				target="_blank">GPL-3.0</a
-			>.
-			<br />
-			<br />Composability with others artworks can be explored thanks to the
-			<a
-				href="https://eips.ethereum.org/EIPS/eip-4883"
-				rel="external noopener noreferrer"
-				target="_blank">EIP-4883</a
-			>
-			compliance.
-			<br />
-			<br />
-			<p>Disclaimer: You are using this site and contracts at your own risk.</p>
+			You can preview your tree in the <a href="/playground">Playground</a>.
 		</Toggle>
 	</div>
 </div>

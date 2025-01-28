@@ -17,7 +17,7 @@
 <header>
 	<nav class:state--open={navOpen} on:keydown={handleEscapeWindow}>
 		<a class="brand" href="/" aria-label="Go to homepage">
-			<img src="/tree-ascii-art.svg" alt="The Merge Trees" class="logo" />
+			<img src="/tree-ascii-art.svg" alt="Logo of an ASCII tree" class="logo" />
 			<span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
 				>The Merge Trees</span
 			>
@@ -63,16 +63,10 @@
 				on:click={() => (navOpen = false)}
 				aria-current={segment.startsWith('/explore') ? 'page' : undefined}>EXPLORE</a
 			> -->
-			<!-- <a
-				href="/docs"
-				rel="external noopener noreferrer"
-				target="_blank"
-				on:click={() => (navOpen = false)}>Docs</a
-			> -->
 			<a
-				href="/markers"
+				href="/about"
 				on:click={() => (navOpen = false)}
-				aria-current={segment.startsWith('/markers') ? 'page' : undefined}>Markers</a
+				aria-current={segment.startsWith('/markers') ? 'page' : undefined}>About</a
 			>
 			<a
 				href="/playground"
