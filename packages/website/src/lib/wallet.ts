@@ -6,6 +6,7 @@ import { browser } from '$app/environment';
 import { network } from '$lib/blockchain/Network';
 import { NetworkReader } from '$lib/blockchain/NetworkReader';
 import { get, writable } from 'svelte/store';
+import { PUBLIC_LEDGER_WALLETCONNECT_PROJECT_ID } from '$env/static/public';
 
 export const ethPrice = writable(0);
 export const provider = writable<ethers.BrowserProvider>();
@@ -59,41 +60,36 @@ browser && setTimeout(initialize, 500);
 async function initialize() {
 	const Onboard = (await import('@web3-onboard/core')).default;
 	const injected = (await import('@web3-onboard/injected-wallets')).default();
+	const ledger = (await import('@web3-onboard/ledger')).default({
+		walletConnectVersion: 2,
+		/**
+		 * Project ID associated with [WalletConnect account](https://cloud.walletconnect.com)
+		 */
+		projectId: PUBLIC_LEDGER_WALLETCONNECT_PROJECT_ID,
+		requiredChains: [1]
+	});
+	// const walletConnect = (await import('@web3-onboard/walletconnect')).default({
+	// 	projectId: PUBLIC_LEDGER_WALLETCONNECT_PROJECT_ID,
+	// 	requiredChains: [1]
+	// });
 
-	// const walletConnect = (await import('@web3-onboard/walletconnect')).default();
+	const wallets = [injected, ledger];
+
+	const appMetadata = {
+		name: 'Merge Trees',
+		icon: '/favicon-96x96.png',
+		explore: 'https://themergetrees.xyz/',
+		description: 'A generative art experiment to build an on-chain evolving forest.',
+		recommendedInjectedWallets: [{ name: 'MetaMask', url: 'https://metamask.io' }]
+	};
 
 	const onboard = Onboard({
-		wallets: [injected],
+		wallets,
 		chains: [network.blocknative],
-		appMetadata: {
-			name: 'Merge Trees',
-			icon: '/favicon-96x96.png',
-			description: 'A generative art experiment to build an on-chain evolving forest.',
-			recommendedInjectedWallets: [{ name: 'MetaMask', url: 'https://metamask.io' }]
-		},
+		appMetadata,
 		i18n: {},
-		accountCenter: {
-			desktop: {
-				position: 'bottomRight',
-				enabled: true
-			},
-			mobile: {
-				enabled: false
-			}
-		},
-		notify: {
-			desktop: {
-				enabled: false,
-				transactionHandler: (transaction) => {
-					console.log({ transaction });
-				}
-			},
-			mobile: {
-				enabled: false,
-				transactionHandler: (transaction) => {
-					console.log({ transaction });
-				}
-			}
+		connect: {
+			autoConnectLastWallet: true
 		}
 	});
 	web3Onboard.set(onboard);

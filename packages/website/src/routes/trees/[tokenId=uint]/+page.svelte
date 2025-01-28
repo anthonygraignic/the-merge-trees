@@ -2,7 +2,7 @@
 	import { PUBLIC_EXPLORER_URL, PUBLIC_MERGETREES_CONTRACT_ADDRESS } from '$env/static/public';
 	import ErrorComponent from '$lib/components/ErrorComponent.svelte';
 	import OnlyConnected from '$lib/components/web3/OnlyConnected.svelte';
-	import { provider, connectedAccount, networkReader } from '$lib/wallet';
+	import { provider, connectedAccount } from '$lib/wallet';
 	import mergeTreesArtifact from 'merge-trees-contracts/artifacts/contracts/TheMergeTree.sol/TheMergeTree.json';
 
 	import SvelteSeo from 'svelte-seo';
