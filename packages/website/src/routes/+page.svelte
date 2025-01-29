@@ -6,6 +6,7 @@
 	import OpenMint from '$lib/components/mint/OpenMint.svelte';
 	import { connectedAccount } from '$lib/wallet';
 	import OnlyConnected from '$lib/components/web3/OnlyConnected.svelte';
+	import ExternalLink from '$lib/components/ExternalLink.svelte';
 
 	const title = 'The Merge Trees | Generative on-chain forest';
 	const description =
@@ -38,8 +39,8 @@
 	}}
 />
 
-<main>
-	<div class="bg-green-100 dark:bg-green-900 w-full pt-10">
+<main class="flex flex-col items-center pb-4 text-justify">
+	<div class="bg-green-100 dark:bg-green-900 pt-10 w-full">
 		<section
 			class="grid sm:grid-cols-2 grid-cols-1 items-center sm:justify-items-start justify-items-center gap-2 max-w-5xl mx-auto my-20"
 		>
@@ -49,7 +50,7 @@
 				<div class="text-lg">
 					<p>Trees evolving on-chain in 2 phases:</p>
 					<ol class="list-decimal list-inside mt-2">
-						<li><b>Open Mint</b>: 100 NFTs available at 0.07233Ξ</li>
+						<li><b>Public Mint</b>: 100 NFTs available at 0.07233Ξ</li>
 						<li><b>Stag Hunt</b>: Shape the forest’s future</li>
 					</ol>
 					<br />
@@ -67,42 +68,76 @@
 		</section>
 	</div>
 
-	<section>
+	<section class="max-w-screen-md mx-auto">
 		<div class="mt-10">
-			<p class="mt-2">
+			<p class="mt-2 mb-4">
 				The Merge Trees is a generative art experiment that creates an evolving on-chain forest,
 				inviting reflection on the intricate connections between humans, trees, and the digital
 				world.
-				<br />It serves several purposes:
 			</p>
+			<p>It serves several purposes:</p>
 			<ul class="list-disc list-inside mt-2">
 				<li>
-					<b>Celebrate a historic milestone </b>as Ethereum transitioned from Proof of Work to Proof
-					of Stake 🐼, reducing its energy consumption by 99.95%.
+					<b>Celebrate a historic milestone 🐼</b> as Ethereum transitioned from Proof of Work to Proof
+					of Stake , reducing its energy consumption by 99.95%.
 				</li>
 				<li>
-					<b>Watch trees evolve</b> through your actions and as <strike>time</strike> blocks goes on
+					<b>Watch trees evolve</b> through your actions and as <strike>time</strike> blocks goes on.
 				</li>
 				<li>
 					Engage in a <b>stag hunt game</b>, fostering cooperation to nurture a thriving forest or
 					pursuing self-interest at the forest's expense.
 				</li>
 			</ul>
-			<p class="mt-4">You can find out more info below:</p>
 		</div>
+		<div>
+			<h1>How it works ?</h1>
+			<ol class="list-decimal list-inside mt-2">
+				<li>Mint your tree</li>
+				<li>Transfer/sell/buy it to watch it grow</li>
+				<li>
+					Start to play when the public mint is over: Hunt the stag by cooperating or the hare
+					individually
+				</li>
+				<li>Shape the forest: Every action impacts the dynamics of the game for all players.</li>
+			</ol>
 
-		<Faq />
+			<div class="text-center mt-6">
+				<a
+					href="/about"
+					class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+					>Learn more</a
+				>
+			</div>
+		</div>
+		<div>
+			<h1>Why Trees and what is 'The Merge' ?</h1>
+			<p>
+				<b>Trees</b> can be found everywhere in the world and are essential for our environment.
+				They are living beings and used in many civilizations as a symbol for life.
+				<br />
+				The Merge Trees want to represent the life happening on the Ethereum blockchain through blocks,
+				events, logs (...) and the community behind it.
+			</p>
+			<p>
+				<br />
+				<ExternalLink href="https://ethereum.org/en/upgrades/merge/"><b>The Merge</b></ExternalLink>
+				is an upgrade of the Ethereum blockchain that switched from Proof of Work to Proof of Stake consensus.<br
+				/>
+				This eliminated the need for energy-intensive mining, and instead secures the network using staked
+				ether.
+			</p>
+		</div>
 	</section>
 </main>
 <ErrorModal bind:error />
 
 <style lang="postcss">
-	main {
-		@apply pb-4 text-justify;
-		@apply flex flex-col items-center;
-	}
 	section {
 		@apply px-2 sm:px-4;
+	}
+	h1 {
+		@apply text-2xl font-bold text-green-600 mt-4;
 	}
 	li {
 		@apply ml-4 mt-1;
